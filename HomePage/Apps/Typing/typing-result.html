@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>タイピングゲーム</title>
+        <!-- deletestyle -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
+
+         <!-- favicon -->
+         <link rel="icon" href="./favicon.png">
+
+        <!-- myCSS -->
+        <!-- <link rel="stylesheet" href="css/default.css"> -->
+
+        <!-- typingCSS -->
+        <!-- <link rel="stylesheet" href="css/typing.css"> -->
+    </head>
+    <body>
+        <table class="radius-table">
+            <tr><th colspan="2">結果</th></tr>
+            <tr><td>Score</td><td id=score>score</td></tr>
+            <tr><td>Level</td><td id="level">level</td></tr>
+            <tr><td>Point</td><td id="point">point</td></tr>
+            <tr><td>経過時間</td><td id="time">time</td></tr>
+            <tr><td>正解数</td><td id="Q_it">it</td></tr>
+            <tr><td>間違えた数</td><td id="Q_mt">miss</td></tr>
+            <tr><td>WPM</td><td id="wpm">wpm</td></tr>
+            <tr><td>正確性</td><td id="accuracy">accuracy</td></tr>
+        </table>
+        <button type="button" class="btn btn-light" onclick="location.href=document.referrer" value="start">もう一回！</button>
+        <!--<button type="button" class="btn btn-light" onclick="location.href='./typing-play.html'" value="start">もう一回！</button>-->
+        
+        <button id="btn-screenshot" class="btn btn-light">スクショ</button>
+        <br>
+        <!-- twitter -->
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="タイピングしました！" data-size="large">Tweet</a>
+  
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="js/typing-result.js"></script>
+    </body>
+</html>

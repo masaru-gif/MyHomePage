@@ -1,0 +1,75 @@
+.typing-game {
+    text-align: center;
+    margin: 0px 0px auto 250px;
+
+    
+}
+
+#difficulty {
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    margin: 50px 600px 0px 600px;
+}
+
+/* 上、左右、下のmarginを個別に指定 */
+.typing-game table {
+    margin: 200px auto 0px;
+    overflow: hidden;
+}
+
+/*tableを丸くする*/
+.typing-game .radius-table{
+    border-radius: 10px;
+}
+.typing-game .radius-table tr:first-child>*:last-child{
+    border-radius: 10px 10px 0 0;
+}
+.typing-game .radius-table tr:last-child>*:first-child{
+    border-radius: 0 0 0 10px;
+}
+.typing-game .radius-table tr:last-child>*:last-child{
+    border-radius: 0 0 10px 0;
+}
+
+
+
+/* デフォルトサイズ */
+html {
+    font-size: 100%;
+}
+
+/* デフォルトサイズのn倍 */
+.typing-game .text {
+    font-size: 3rem;
+    margin-top: 200px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 200px;
+}
+
+button {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.typing-game td {
+    font-size: 2rem;
+    color: #fff;
+     border: 1px solid rgb(130, 165, 231);  
+    background-color: cornflowerblue;
+}
+
+.typing-game th {
+    font-size: 2rem;
+    color: #fff;
+    border: px solid rgb(130, 165, 231); 
+    background-color: cornflowerblue;
+}
+
+.typing-game p {
+    font-size: 2rem;
+}
+
