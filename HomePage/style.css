@@ -1,5 +1,163 @@
+@charset "UTF-8";
+
 html {
-    background-color: greenyellow;
+    font-size: 100%;
+    background-color: forestgreen;
     color: white;
     text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header {
+    background-image: linear-gradient(greenyellow, green);
+    height: 100vh;
+}
+
+#home-top {
+    background-image: linear-gradient(greenyellow, green);
+    height: 100vh;
+}
+
+#home-nav {
+    display: flex;
+    justify-content: space-between;
+    position: -webkit-sticky; /* Safari 12.1 */  
+    position: sticky;
+    top: 0px;
+    padding-inline: 1rem;
+    opacity: 1;
+    font-size: 3rem;
+}
+
+#top-icon {
+    padding-top: 0.5rem;
+    font-size: 2rem;
+}
+
+summary {
+    list-style: none; /* トグルの矢印消去 */
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin: 0rem 0rem 1rem 0rem;
+    padding-top: 20rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    font-size: 1rem;
+}
+
+
+
+.main-nav {
+    text-align: right;
+    margin: 2rem 5rem;
+}
+
+.link-icon {
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin: 0rem 1rem 1rem 1rem;
+}
+
+#copyright {
+    padding-bottom: 1rem;
+}
+
+footer {
+    background-color: green;
+}
+
+
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 10%;
+    height: 20%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: green;
+    transition: .5s;
+    border-radius: 10%;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+left: 89.5%;/* メニューを画面に入れる */
+margin-top: 5%;
 }

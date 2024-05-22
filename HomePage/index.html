@@ -2,17 +2,76 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>homepage</title>
+        <title>Homepage</title>
+        <!-- サイトの説明 -->
+        <meta name="description" content="trueverdureのホームページです">
+        <!-- レスポンシブの横幅設定 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- deletestyle -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
+
+        <!-- mystyle -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- font English -->
+        <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+        <!-- font Japanese -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poetsen+One&display=swap" rel="stylesheet">
+
+        <!-- icon -->
+        <script src="https://kit.fontawesome.com/8203b7141d.js" crossorigin="anonymous"></script>
+
     </head>
 
     <body>
-        <h1>Welcome!!</h1>
-        <p>trueverdureのホームページ</p>
-        <h2>Apps</h2>
-        <a href="Apps/Typing/typing.html">typing</a>
-        <h2>skills</h2>
-        <h2>links</h2>
-        <a href="https://github.com/masaru-gif">MyGitHub</a>
+        <!-- ホームページのナビゲーション -->
+        <div id="home-nav">
+            <a id="top-icon" href="index.html">TrueVerdure</a>
+                   <!-- ハンバーガーメニュー部分 -->
+            <div class="nav">
+            
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+            
+                <!-- メニュー -->
+                <nav class="nav_content">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#section-apps">Apps</a></li>
+                    <li class="nav_item"><a href="#section-skills">Skills</a></li>
+                </ul>
+            </nav>
+   
+        </div>
+        </div>
+        <!-- ホームページのトップ -->
+        <header>
+            <div id="home-top-text">
+                <h1>Welcome!!</h1>
+                <p>trueverdure.com</p><br>
+            </div>
+        </header>
+
+        <!-- 作ってみたアプリ -->
+        <section id="section-apps">
+            <h2>Apps</h2>
+            <a href="apps/typing/typing.html">typing</a>
+        </section>
+
+        <!-- 今まで勉強したskills -->
+        <section id="section-skills">
+            <h2>skills</h2>
+        </section>
+
+        <!-- リンクなど -->
+        <footer>
+            <a href="https://github.com/masaru-gif"><i class="fa-brands fa-github link-icon"></i></a>
+            <i class="fa-brands fa-x-twitter link-icon"></i>
+            <i class="fa-brands fa-instagram link-icon"></i>
+            <p id="copyright"><small>&copy; 2024 trueverdure</small></p>
+        </footer>
     </body>
 </html>
