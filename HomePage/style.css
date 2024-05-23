@@ -55,9 +55,12 @@ a {
     scroll-behavior: smooth;
 }
 
+section, footer{
+    scroll-snap-align: start;
+}
+
 section {
     height: 100vh;
-    scroll-snap-align: start;
 }
 
 #section-top {
@@ -65,7 +68,9 @@ section {
     height: 100vh;
 }
 
-
+footer {
+    background-color: green;
+}
 
 .link-icon {
     font-size: 2rem;
@@ -75,10 +80,6 @@ section {
 
 #copyright {
     padding-bottom: 1rem;
-}
-
-footer {
-    background-color: green;
 }
 
 
