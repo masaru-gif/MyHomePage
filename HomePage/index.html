@@ -25,52 +25,58 @@
     </head>
 
     <body>
-        <!-- ホームページのナビゲーション -->
+
         <header>
-            <a id="top-icon" href="index.html">TrueVerdure</a>
-                   <!-- ハンバーガーメニュー部分 -->
-            <div class="nav">
-            
+            <!-- ロゴ -->
+            <a id="top-logo" href="index.html">TrueVerdure</a>
+
+            <!-- ハンバーガーメニュー -->
+            <div class="humberger-menu">
+
                 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-            
+                <input id="drawer-input" class="checkbox-hidden" type="checkbox">
                 <!-- ハンバーガーアイコン -->
-                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <label for="drawer-input" id="drawer-open"><span></span></label>
             
-                <!-- メニュー -->
-                <nav class="nav_content">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="#section-top">Top</a></li>
-                    <li class="nav_item"><a href="#section-apps">Apps</a></li>
-                    <li class="nav_item"><a href="#section-skills">Skills</a></li>
-                </ul>
-            </nav>
+                <!-- ナビ -->
+                <nav id="nav-container">
+                    <ul id="nav-list">
+                        <li><a class="nav-item" href="#section-top">Top</a></li>
+                        <li><a class="nav-item" href="#section-apps">Apps</a></li>
+                        <li><a class="nav-item" href="#section-skills">Skills</a></li>
+                        <li><a class="nav-item" href="#section-s">S</a></li>
+                        <li><a class="nav-item" href="#section-a">A</a></li>
+                    </ul>
+                </nav>
+
+            </div>
         </header>
    
-        <div class="scroll-snap-container"> <!-- スクロールスナップ -->
+        <!-- スクロールスナップ -->
+        <div class="scroll-snap-container">
             <!-- ホームページのトップ -->
             <section id="section-top">
-                <h1>Welcome!!</h1>
-                <p>trueverdure.com</p><br>
+                <h1 id="top-comment">Welcome!!</h1>
+                <p id="top-name">trueverdure.com</p><br>
             </section>
 
             <!-- 作ってみたアプリ -->
             <section id="section-apps">
-                <h2>Apps</h2>
+                <h2 class="section-title">Apps</h2>
                 <a href="apps/typing/typing.html">typing</a>
             </section>
 
             <!-- 今まで勉強したskills -->
             <section id="section-skills">
-                <h2>skills</h2>
+                <h2 class="section-title">skills</h2>
             </section>
 
             <section id="section-s">
-                <h2>s</h2>
+                <h2 class="section-title">s</h2>
             </section>
 
             <section id="section-a">
-                <h2>a</h2>
+                <h2 class="section-title">a</h2>
             </section>
 
             <!-- リンクなど -->

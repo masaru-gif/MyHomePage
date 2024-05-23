@@ -1,94 +1,108 @@
 @charset "UTF-8";
 
 html {
-    font-size: 100%;
+    font-size: 100%; /* fontが基本設定の大きさになる */
     background-color: forestgreen;
-    color: white;
+    color: white; /* 文字の色 */
     text-align: center;
-    font-family: "Poetsen One", sans-serif;
+    font-family: "Poetsen One", sans-serif; /* 英語と日本語のフォント */
     font-weight: 400;
-    font-style: normal;
-    scroll-behavior: smooth;
+    font-style: normal; /* 筆記体などの設定 */
 }
+
+/* =====================================================
+    header
+======================================================== */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0px;
+    display: flex; /* 横並び */
+    justify-content: space-between; /* 要素を左右端に */
     padding-inline: 1rem;
-    opacity: 1;
-    font-size: 3rem;
+    position: fixed; /* 上部に固定 */
+    opacity: 0.8; /* 透明度 */
     width: 100vw;
-    
 }
 
-#top-icon {
+/* ロゴ */
+#top-logo {
     padding-top: 0.5rem;
     font-size: 2rem;
 }
 
-
-h1 {
-    font-size: 4rem;
+/* welcome!! */
+#top-comment {
+    font-size: 5rem;
     margin: 0rem 0rem 1rem 0rem;
     padding-top: 20rem;
 }
 
-h2 {
-    padding-top: 1rem;
-    font-size: 2rem;
+/* welcom!!の下に表示してる名前 */
+#top-name {
+    font-size: 1.5rem;
 }
 
-p {
-    font-size: 1rem;
-}
+/* =====================================================
+    section
+======================================================== */
 
-a {
-    font-size: 1rem;
-}
-
+/* scroll-snapの囲み */
 .scroll-snap-container {
     overflow: auto;
     scroll-snap-type: y mandatory;
     height: 100vh;
-    scroll-behavior: smooth;
 }
 
 section, footer{
-    scroll-snap-align: start;
+    scroll-snap-align: start; /* scroll-snapを効かせてる */
 }
 
 section {
-    height: 100vh;
+    height: 100vh; 
 }
 
+/* 一番上のセクション */
 #section-top {
     background-image: linear-gradient(greenyellow, green);
     height: 100vh;
 }
 
+/* セクションのタイトル */
+.section-title {
+    padding-top: 1rem;
+    font-size: 3rem;
+}
+
+/* =====================================================
+    footer
+======================================================== */
+
 footer {
     background-color: green;
 }
 
+/* リンクのアイコン */
 .link-icon {
     font-size: 2rem;
     padding-top: 1rem;
     margin: 0rem 1rem 1rem 1rem;
 }
 
+/* コピーライト */
 #copyright {
     padding-bottom: 1rem;
 }
 
+/* =====================================================
+    ハンバーガーメニューのアイコン
+======================================================== */
 
-.drawer_hidden {
+/* チェックボックスの消去(見た目) */
+.checkbox-hidden {
     display: none;
 }
 
 /* ハンバーガーアイコンの設置スペース */
-.drawer_open {
+#drawer-open {
     display: flex;
     height: 60px;
     width: 60px;
@@ -100,68 +114,78 @@ footer {
 }
 
 /* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
+#drawer-open span,
+#drawer-open span:before,
+#drawer-open span:after {
     content: '';
     display: block;
-    height: 3px;
-    width: 25px;
+    height: 7px; /* 線の太さ */
+    width: 40px; /* 線の長さ */
     border-radius: 3px;
-    background: white;
+    background: white; /* 線の色 */
     transition: 0.5s;
     position: absolute;
 }
 
 /* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
-    bottom: 8px;
+#drawer-open span:before {
+    bottom: 12px;
 }
 
 /* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-    top: 8px;
+#drawer-open span:after {
+    top: 12px;
 }
 
 /* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
+#drawer-input:checked ~ #drawer-open span {
     background: rgba(255, 255, 255, 0);
 }
 
 /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
+#drawer-input:checked ~ #drawer-open span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
-
-#drawer_input:checked ~ .drawer_open span::after {
+#drawer-input:checked ~ #drawer-open span::after {
     top: 0;
     transform: rotate(-45deg);
 }
 
-/* メニューのデザイン*/
-.nav_content {
-    width: 0%;
-    height: 0%;
+/* =====================================================
+    ハンバーガーメニューの中身
+======================================================== */
+
+/* 閉じてるときのハンバーガーメニュー */
+#nav-container {
+    height: 50%;
     position: fixed;
-    top: 0;
-    left: 100%; /* メニューを画面の外に飛ばす */
+    top: 0.5%;
+    left: 100%; /*メニューを画面外に飛ばす*/
+    width: 0; /* メニューを閉じる */
     z-index: 99;
-    background: green;
     transition: .5s;
     border-radius: 10%;
-}
-
-/* メニュー黒ポチを消す */
-.nav_list {
-    list-style: none;
+    scroll-behavior: smooth;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
-    left: 89.5%;/* メニューを画面に入れる */
-    margin-top: 5%;
-    width: 10%;
-    transition: .5s;
-    height: 20%;
+#drawer-input:checked ~ #nav-container {
+    left: 80%; /* メニューを画面内に入れる */
+    width: 20%; /* メニューを開く */
+}
+
+/* ハンバーガーメニューの中身 */
+#nav-list { /* リスト本体 */
+    list-style: none; /* メニュー黒ポチを消す */
+    margin-top: 50px;
+    z-index: 100;
+    text-align: right;
+}
+.nav-item { /* リスト要素 */
+    font-size: 2rem;
+    border-radius: 20px 0 0 20px;
+    background: green;
+    padding-inline: 15%;
+    line-height: 1.5;
 }
