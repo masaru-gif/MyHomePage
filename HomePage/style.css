@@ -48,15 +48,16 @@ a {
     font-size: 1rem;
 }
 
-.container {
+.scroll-snap-container {
     overflow: auto;
-    scroll-snap-type: y;
+    scroll-snap-type: y mandatory;
     height: 100vh;
     scroll-behavior: smooth;
 }
 
 section {
     height: 100vh;
+    scroll-snap-align: start;
 }
 
 #section-top {
