@@ -185,7 +185,43 @@ footer {
 .nav-item { /* リスト要素 */
     font-size: 2rem;
     border-radius: 20px 0 0 20px;
-    background: green;
-    padding-inline: 15%;
+    background: rgb(0, 66, 0);
+    padding-inline: 20% 30%;
     line-height: 1.5;
+}
+
+/* =====================================================
+    MOBILE SIZE
+======================================================== */
+
+@media (max-width: 700px) { /* 横幅が700px以下の場合 */
+
+    /* ロゴ */
+    #top-logo {
+        font-size: 1.5rem;
+    }
+
+    /* welcome!! */
+    #top-comment {
+        font-size: 3rem;
+        margin: 0rem 0rem 0.5rem 0rem;
+        padding-top: 15rem;
+    }
+
+    /* welcom!!の下に表示してる名前 */
+    #top-name {
+        font-size: 1rem;
+    }
+
+    /* セクションのタイトル */
+    .section-title {
+        padding-top: 0.5rem;
+        font-size: 2rem;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    #drawer-open {
+        height: 55px;
+        width: 30px;
+    }
 }
