@@ -8,6 +8,7 @@ html {
     font-family: "Poetsen One", sans-serif; /* 英語と日本語のフォント */
     font-weight: 400;
     font-style: normal; /* 筆記体などの設定 */
+    /* scroll-behavior: smooth;  使いたいけど効かない.... */
 }
 
 /* =====================================================
@@ -166,7 +167,6 @@ footer {
     z-index: 99;
     transition: .5s;
     border-radius: 10%;
-    scroll-behavior: smooth;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -188,6 +188,13 @@ footer {
     background: rgb(0, 66, 0);
     padding-inline: 20% 30%;
     line-height: 1.5;
+    box-shadow: 0px 3px rgba(1, 60, 1, 0.304);
+}
+
+/* カーソルが当たってる時色変更 */
+.nav-item:hover{
+    transition: 0.2s;
+    background: red;
 }
 
 /* =====================================================
